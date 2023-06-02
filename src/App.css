@@ -1,38 +1,121 @@
+*,::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(
+    105deg,
+    #8de9f0 0%,
+    #73e7c4 30%,
+    #238386 50%,
+    #2476b9 75%,
+    #234686 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-evenly;
+  /* border: 1px solid black; */
+  border-radius: 7px 3px;
+  width: 40vw;
+  margin: 0 auto;
+  background: #c1a9ee6c;
+}
+
+.input-wrapper {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 0.3rem;
+  padding: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.input-wrapper input {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  width: 20vw;
+  padding: 0.4rem;
+  background: #ffffffb0;
+  font-size: clamp(0.5rem, 2rem, 1rem);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-button {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background: transparent;
 }
+
+.input-list {
+  margin-top: -1rem;
+}
+
+.todo-list {
+  padding-left: 0;
+  display: grid;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.todo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  gap: 1rem;
+  width: 15vw;
+  border: 1px solid rgba(0, 0, 0, 0.336);
+  border-radius: 7px 7px;
+  margin: 0 auto;
+  padding: 0.3rem 0.5rem;
+  background: #deecaca1;
+}
+
+.todo-list li {
+  list-style-type: none;
+  font-size: clamp(0.3rem, 2rem, 1rem);
+}
+
+.delete-button {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background: transparent;
+  font-size: clamp(0.1rem, 1rem, 0.7rem);
+}
+
+
+
+/* Mobile */
+/*
+
+.Content {
+  max-width: 75vw;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+.add-button {
+  width: 12vw;
+}
+
+.todo {
+  gap: 1rem;
+  width: 45vw;
+  margin: 0 auto;
+  padding: 0.3rem 0.5rem;
+}
+
+*/
