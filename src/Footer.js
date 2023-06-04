@@ -8,12 +8,12 @@ const Footer = () => {
         <p className="love">
         Made with 💙
         </p>
-        <p className="socials">
-            <VscGithub size={20}/>
-            <SiLinkedin size={20}/>
+        <p className="socials"> 
+          <a href="https://github.com/adelicia-js" rel="noreferrer" target="_blank"><VscGithub size={20}/></a>
+          <a href="https://www.linkedin.com/in/adelicia/" rel="noreferrer" target="_blank"><SiLinkedin size={20}/></a>
         </p>
         <p>
-            $Source | 2023 - 2024 
+            <a href="https://github.com/adelicia-js/todo-cra" rel="noreferrer" target="_blank" className="source"><span>$Source</span></a> | 2023 - 2024 
         </p> 
         
     </>

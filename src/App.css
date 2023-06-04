@@ -28,7 +28,7 @@ body {
   justify-content: space-evenly;
   /* border: 1px solid black; */
   border-radius: 7px 3px;
-  width: 40vw;
+  width: clamp(30vw, 120vw, 50vw);
   margin: 0 auto;
   background: #c1a9ee6c;
 }
@@ -43,7 +43,8 @@ body {
 .input-wrapper input {
   border: 1px solid transparent;
   border-radius: 3px;
-  width: 20vw;
+  /* width: 20vw; */
+  width: calc(clamp(30vw, 120vw, 50vw) - 20%);
   padding: 0.4rem;
   background: #ffffffb0;
   font-size: clamp(0.5rem, 2rem, 1rem);
@@ -72,7 +73,7 @@ body {
   justify-content: space-between;
   text-align: center;
   gap: 1rem;
-  width: 15vw;
+  width: calc(clamp(30vw, 120vw, 50vw) - 45%);
   border: 1px solid rgba(0, 0, 0, 0.336);
   border-radius: 7px 7px;
   margin: 0 auto;
@@ -92,30 +93,43 @@ body {
   font-size: clamp(0.1rem, 1rem, 0.7rem);
 }
 
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+}
 
+.socials a:visited {
+  color:black;
+}
+
+.socials a:hover {
+  color:#8de9f0;
+}
+
+.source:visited {
+  color: black;
+}
+
+.source {
+  text-decoration: none;
+}
+
+.source:hover {
+  color:#8de9f0;
+}
 
 /* Mobile */
-/*
 
-.Content {
-  max-width: 75vw;
+@media screen and (min-width:300px) and (max-width: 538px) {
+
+  .Content {
+    width: 65vw;
+  }
+
+  .todo {
+    width: 35vw;
+  }
+  
 }
-
-.input-wrapper {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 1rem;
-}
-
-.add-button {
-  width: 12vw;
-}
-
-.todo {
-  gap: 1rem;
-  width: 45vw;
-  margin: 0 auto;
-  padding: 0.3rem 0.5rem;
-}
-
-*/
