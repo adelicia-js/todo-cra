@@ -62,7 +62,7 @@ body {
 
 .todo-list {
   padding-left: 0;
-  display: grid;
+  display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
@@ -70,25 +70,25 @@ body {
 .todo {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   text-align: center;
-  gap: 1rem;
   width: calc(clamp(30vw, 120vw, 50vw) - 45%);
-  border: 1px solid rgba(0, 0, 0, 0.336);
   border-radius: 7px 7px;
   margin: 0 auto;
   padding: 0.3rem 0.5rem;
-  background: #deecaca1;
 }
 
 .todo-list li {
   list-style-type: none;
+  width: calc(clamp(30vw, 120vw, 50vw) - 45%);
+  border-radius: 3px;
   font-size: clamp(0.3rem, 2rem, 1rem);
+  background: #deecaca1;
+  border: 1px solid rgba(0, 0, 0, 0.336);
+  padding: 0.3rem 0;
 }
 
 .delete-button {
   border: 1px solid transparent;
-  border-radius: 3px;
   background: transparent;
   font-size: clamp(0.1rem, 1rem, 0.7rem);
 }
@@ -125,11 +125,25 @@ body {
 @media screen and (min-width:300px) and (max-width: 538px) {
 
   .Content {
-    width: 65vw;
+    width: 85vw;
+  }
+
+  .input-wrapper {
+    width: 90vw;
+  }
+
+  .input-wrapper input {
+    width: 67vw;
   }
 
   .todo {
-    width: 35vw;
+    width: 70vw;
+    justify-content: flex-end;
+}
+
+  .todo li {
+    width: 50vw;
   }
-  
+
+
 }

@@ -1,4 +1,4 @@
-import { SlPencil } from "react-icons/sl";
+import { SlPlus } from "react-icons/sl";
 const TodoInput = ({ todo, setTodo, addTodo }) => {
   return (
     <div className="input-wrapper">
@@ -12,7 +12,7 @@ const TodoInput = ({ todo, setTodo, addTodo }) => {
         }}
       ></input>
       <button className="add-button" onClick={addTodo}>
-        <SlPencil size={20}/>
+        <SlPlus size={22}/>
       </button>
     </div>
   );

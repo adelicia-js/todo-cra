@@ -10,3 +10,5 @@ TODO
 - Separate the boxes for todo items
 - Give add and delete icons a rounded border box instead
 - Add a checkbox and strike-out event for when a todo is completed 
+- Todo list to look like a notepad
+- Change add todo icon
