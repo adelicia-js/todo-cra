@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Make a Todo List! (WIP)</h1>
+      <h1>Make a To-Do List!</h1>
       <div className="Content">
         <TodoInput todo={todo} setTodo={setTodo} addTodo={addTodo} />
         <TodoList todoList={todos} removeTodo={deleteTodo} />

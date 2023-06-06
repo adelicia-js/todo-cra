@@ -8,7 +8,8 @@ const TodoList = ({ todoList, removeTodo }) => {
             <div className="todo">
               <li key={index}>{entry}</li>
               <button className="delete-button" onClick={()=>{removeTodo(entry)}}>
-                <SlTrash size={20}/>
+                <SlTrash size={18}/>
+
               </button>
             </div>
           ))}
