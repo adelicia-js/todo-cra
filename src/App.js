@@ -4,11 +4,74 @@ import "./App.css";
 import { useState } from "react";
 // useState is a React hook that takes a state's initial value and returns an array with 2 values,
 // i.e., a getter and setter function
-import TodoInput from "./TodoInput";
-import TodoList from "./TodoList";
-import Footer from "./Footer";
 
-function App() {
+import { MdAdd } from "react-icons/md";
+import { SlTrash } from "react-icons/sl";
+import { VscGithub } from "react-icons/vsc";
+import {SiLinkedin } from "react-icons/si";
+
+const TodoInput = ({ todo, setTodo, addTodo }) => {
+  return (
+    <div className="input-wrapper">
+      <input
+        type="text"
+        name="todo"
+        value={todo}
+        placeholder="Let's get workin'..."
+        onChange={(e) => {
+          setTodo(e.target.value);
+        }}
+      ></input>
+      <button className="add-button" id="urmom" onClick={addTodo}>
+        <MdAdd size={21}/>
+      </button>
+    </div>
+  );
+};
+
+const TodoList = ({ todoList, removeTodo }) => {
+  return (
+    <div className="input-list">
+      {todoList?.length > 0 ? (
+        <ul className="todo-list">
+          {todoList.map((entry, index) => (
+            <div className="todo">
+              <li key={index}>{entry}</li>
+              <button className="delete-button" onClick={()=>{removeTodo(entry)}}>
+                <SlTrash size={18}/>
+
+              </button>
+            </div>
+          ))}
+        </ul>
+      ) : (
+        <div className="empty">
+          <p>Add some tasks! :)</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+const Footer = () => {
+  return (
+    <>
+        <p className="love">
+        Made with 💖
+        </p>
+        <p className="socials"> 
+          <a href="https://github.com/adelicia-js" rel="noreferrer" target="_blank"><VscGithub size={25}/></a>
+          <a href="https://www.linkedin.com/in/adelicia/" rel="noreferrer" target="_blank"><SiLinkedin size={25}/></a>
+        </p>
+        <p>
+            <a href="https://github.com/adelicia-js/todo-cra" rel="noreferrer" target="_blank" className="source">$Source | 2023 - 2024</a> 
+        </p> 
+        
+    </>
+  );
+};
+
+const App = () => {
   // Create a todo
   const [todo, setTodo] = useState("");
   // Getter function: todo -> displays current state
