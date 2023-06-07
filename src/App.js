@@ -10,16 +10,25 @@ import { SlTrash } from "react-icons/sl";
 import { VscGithub } from "react-icons/vsc";
 import {SiLinkedin } from "react-icons/si";
 
-const TodoInput = ({ todo, setTodo, addTodo }) => {
+const TodoInput = ({ todo, setTodo, addTodo, setTodos, todos }) => {
   return (
     <div className="input-wrapper">
       <input
         type="text"
+        id="todo-input"
         name="todo"
         value={todo}
         placeholder="Let's get workin'..."
         onChange={(e) => {
           setTodo(e.target.value);
+        }}
+        onKeyUp={(e) => {
+          if(e.key==='Enter') {
+            e.preventDefault();
+            setTodo(e.target.value);
+            setTodos([...todos, todo]);
+            setTodo('');
+          }
         }}
       ></input>
       <button className="add-button" id="urmom" onClick={addTodo}>
@@ -104,7 +113,7 @@ const App = () => {
     <div className="App">
       <h1>Make a To-Do List!</h1>
       <div className="Content">
-        <TodoInput todo={todo} setTodo={setTodo} addTodo={addTodo} />
+        <TodoInput todo={todo} setTodo={setTodo} addTodo={addTodo} setTodos={setTodos} todos={todos}/>
         <TodoList todoList={todos} removeTodo={deleteTodo} />
       </div>
       <Footer/>

@@ -70,7 +70,6 @@ h1 {
   box-shadow: 1px 0.1px 5px #ffffff71;
 }
 
-
 .input-wrapper input:focus {
   outline: 1px solid #310121;
   box-shadow: 1px 0.1px 5px #310121a1;
@@ -98,6 +97,9 @@ h1 {
   display: flex;
   flex-direction: row;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  overflow-wrap: anywhere;
   width: calc(clamp(30vw, 120vw, 50vw) - 45%);
   gap: 0.5rem;
   border-radius: 7px 7px;
@@ -113,7 +115,7 @@ h1 {
   background: #3101218e;
   color:white;
   border: 1px solid white;
-  padding: 0.3rem 0;
+  padding: 0.3rem 0.5rem;
 }
 
 .delete-button {
@@ -123,6 +125,7 @@ h1 {
   color: white;
   font-size: clamp(0.1rem, 1rem, 0.7rem);
   padding: 0.5rem;
+  height: 10%;
 }
 
 .delete-button:hover,.add-button:hover {
@@ -144,7 +147,7 @@ h1 {
 
 .socials a:hover {
   color: #770f18;
-  filter: drop-shadow(0 0 0.15rem #ffffff);
+  filter: drop-shadow(0 0 0.15rem #947779c9);
 }
 
 .source:visited {
